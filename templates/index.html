@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartAssist AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <h2>✦ SmartAssist</h2>
+            <button id="new-chat" class="new-chat">+ New chat</button>
+            <p class="side-label">YOUR ASSISTANT</p>
+            <p class="side-note">Ask questions, learn, write, and brainstorm.</p>
+            <div class="sidebar-bottom">Powered by AI</div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h3>SmartAssist AI</h3>
+                    <span class="status"><span></span> Your AI assistant</span>
+                </div>
+                <button id="clear-chat" class="clear-button">New conversation</button>
+            </header>
+
+            <section id="chat-box" class="chat-box">
+                <div class="welcome" id="welcome">
+                    <div class="welcome-icon">✦</div>
+                    <h1>How can I help you today?</h1>
+                    <p>Ask a question or choose a suggestion to get started.</p>
+
+                    <div class="suggestions">
+                        <button class="suggestion">Explain Python in simple words</button>
+                        <button class="suggestion">Give me project ideas</button>
+                        <button class="suggestion">Help me prepare for interviews</button>
+                    </div>
+                </div>
+            </section>
+
+            <form id="chat-form" class="chat-form">
+                <div class="input-wrap">
+                    <textarea id="message" rows="1"
+                        placeholder="Message SmartAssist..."
+                        aria-label="Your message" required></textarea>
+                    <button id="send-button" type="submit" aria-label="Send message">➤</button>
+                </div>
+                <p class="disclaimer">AI can make mistakes. Check important information.</p>
+            </form>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
